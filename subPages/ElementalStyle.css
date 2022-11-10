@@ -96,3 +96,17 @@ nav ul li a:hover::after{
 .tab-img{
     display: block;
 }
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #084008;
+    padding: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #084008;
+}
