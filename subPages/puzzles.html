@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="puzzleStyle.css">
+    <script src="https://kit.fontawesome.com/bf513985fa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- --------Header-------- -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="../Assets/PonderousLogo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="../index.html">Home</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Puzzles</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------Boxes------- -->
+    <div id="about">
+        <div class="container">
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('slide','slideimg')">Sliding Blocks</p>
+                <p class="tab-links" onclick="opentab('round','roundimg')">Nine Circles</p>
+                <p class="tab-links" onclick="opentab('riddle','riddleimg')">Riddle Box</p>
+                <p class="tab-links" onclick="opentab('hPad','hPadimg')">Hidden Pad</p>
+            </div>
+            <div class="row">
+                <div class="about-col-1">
+                    <div class="tab-contents active-tab" id="slide">
+                        <ul>
+                            <li><span>Initial design</span><br>This box was, as pictured, designed on binder paper. The actual design proccess largly involved sequentally adding new sliders blocking previous ones.</li>
+                            <li><span>Prototype</span><br>There was no prototype of this design, which turned out to be an oversight. While the design worked fine in theory the limitations of the materials caused some issues that could have been anticipated with a prototype.</li>
+                            <li><span>Fabrication</span><br>Most pieces of the box were made with a bandsaw and drill press, howver the top plate was cut on a 3 axis CNC router.</li>
+                            <li><span>Product</span><br>The final product works as adverised, slide the pieces around, and turn the center to open the box. There were some material strength issues with the crosslinks on the bottom, and the top plate is slightly warped, but overall I'm proud of the box.</li>
+                            <li><span>Reflection</span><br>Not a well run project buy the industry standerd, but a good result for a highschool freshman.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="round">
+                        <ul>
+                            <li><span>Initial design</span><br>This projet was largly centered around asthetic concerns. I simply liked the Idea of having nine circles overlapping on the lid of the box.</li>
+                            <li><span>Prototype</span><br>The prototype for this box was a series of paper disks with cutouts and markings. A few different itterations were tried to find a good balance of interactablity and difficulty.</li>
+                            <li><span>Fabrication</span><br>I used a lathe to turn some purpleheart, padduk, and oak to the same diameter, then cut off slices. The lines on top were cut with a hacksaw and a file then filled with black paint.</li>
+                            <li><span>Product</span><br>The result of this product is a gorgeous lid, placed ontop of a thrown together plywood box. When I finished the lid i realized I had neglected to reserve some wood for the box itself.</li>
+                            <li><span>Reflection</span><br>I'm very happy with how this box turned out. It is astheticly pleasing (in my opinion), robust, and provides an interesting puzzle.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="riddle">
+                        <ul>
+                            <li><span>Initial design</span><br></li>
+                            <li><span>Prototype</span><br></li>
+                            <li><span>Fabrication</span><br></li>
+                            <li><span>Product</span><br></li>
+                            <li><span>Reflection</span><br></li>
+                            </ul>
+                    </div>
+                    <div class="tab-contents" id="hPad">
+                        <ul>
+                            <li><span>Initial design</span><br></li>
+                            <li><span>Prototype</span><br></li>
+                            <li><span>Fabrication</span><br></li>
+                            <li><span>Product</span><br></li>
+                            <li><span>Reflection</span><br></li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="about-col-2">
+                    <div class="tab-img active-img" id="slideimg">
+                        <img src="../Assets/puzzlepics/slideLidOn.png">
+                        <img src="../Assets/puzzlepics/slideLidOff.png">
+                        <img src="../Assets/puzzlepics/slidePrototype1.png">
+                        <img src="../Assets/puzzlepics/slidePrototype2.png">
+                    </div>
+                    <div class="tab-img" id="roundimg">
+                        <img src="../Assets/puzzlepics/roundelTop.jpg">
+                        <img src="../Assets/puzzlepics/roundelBot.jpg">
+                    </div>
+                    <div class="tab-img" id="riddleimg">
+                        <img src="../Assets/puzzlepics/riddleSketch.png">
+                        <img src="../Assets/puzzlepics/riddleParts.jpg">
+                    </div>
+                    <div class="tab-img" id="hPadimg">
+                        <img src="../Assets/PonderousLogo.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //script for switching between tabs in the about me section
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        var tabims = document.getElementsByClassName("tab-img");
+        function opentab(tabname,imgname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcont of tabcontents){
+                tabcont.classList.remove("active-tab");
+            }
+            for(imgcont of tabims){
+                imgcont.classList.remove("active-img");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+            document.getElementById(imgname).classList.add("active-img")
+        }
+    </script>
+
+</body>
+</html>
