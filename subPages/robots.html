@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="robots.css">
+    <script src="https://kit.fontawesome.com/bf513985fa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- --------Header-------- -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="../Assets/PonderousLogo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="../index.html">Home</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Engineering Projects</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------projects------- -->
+    <div id="about">
+        <div class="container">
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('slide','slideimg')">FIRST Robotics</p>
+                <p class="tab-links" onclick="opentab('round','roundimg')">Table</p>
+            </div>
+            <div class="row">
+                <div class="about-col-1">
+                    <div class="tab-contents active-tab" id="slide">
+                        <ul>
+                            <li><span>Initial design</span><br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="round">
+                        <ul>
+                            <li><span>Initial design</span><br></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-col-2">
+                    <div class="tab-img active-img" id="slideimg">
+                        <img src="../Assets/engineer/frcClimb.jpg">
+                        <img src="../Assets/engineer/frcGear.jpg">
+                        <img src="../Assets/engineer/frcTrain.jpg">
+                    </div>
+                    <div class="tab-img" id="roundimg">
+                        <img src="../Assets/engineer/openTable.jpg">
+                        <img src="../Assets/engineer/closedTable.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="process" id="processShowHide">
+                <h1 class="sub-title">Process</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="../Assets/engineer/blueprints.jpg">
+                        <div class="layer">
+                            <h3>Blueprint</h3>
+                            <p>story</p>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="../Assets/engineer/tableCAD.png">
+                        <div class="layer">
+                            <h3>CAD</h3>
+                            <p>story</p>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="../Assets/engineer/tableMold.jpg">
+                        <div class="layer">
+                            <h3>Mold</h3>
+                            <p>story</p>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="../Assets/engineer/tableCrown.jpg">
+                        <div class="layer">
+                            <h3>Part</h3>
+                            <p>story</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //script for switching between tabs in the about me section
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        var tabims = document.getElementsByClassName("tab-img");
+        function opentab(tabname,imgname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcont of tabcontents){
+                tabcont.classList.remove("active-tab");
+            }
+            for(imgcont of tabims){
+                imgcont.classList.remove("active-img");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+            document.getElementById(imgname).classList.add("active-img");
+            if(tabname == 'round'){
+                document.getElementById("processShowHide").classList.add("shown");
+            }
+            else{
+                document.getElementById("processShowHide").classList.remove("shown");
+            }
+        }
+    </script>
+
+</body>
+</html>
