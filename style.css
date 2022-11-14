@@ -14,7 +14,7 @@ html{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url("Assets/logo.png"); /*TODO*/
+    background-image: url("Assets/mainPage/logo.png"); /*TODO*/
     background-size: cover;
     background-position: center;
 }
