@@ -101,10 +101,8 @@
                         <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-            </div>
-            <i class="btn" id="moreBtn" onclick="showMore()">See More</i>
-            <div class="work-list hidden" id="more-work">
-                <div class="work">
+                <!-- ------Hidden until button pressed------ -->
+                <div class="work hiddenGames">
                     <img src="Assets/GameImages/orbit.gif">
                     <div class="layer">
                         <h3>Orbit</h3>
@@ -112,7 +110,7 @@
                         <a href="https://tplemur.github.io/Orbit/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <div class="work hiddenGames">
                     <img src="Assets/GameImages/blub.gif">
                     <div class="layer">
                         <h3>Blub</h3>
@@ -120,7 +118,7 @@
                         <a href="https://tplemur.github.io/Blub/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <div class="work hiddenGames">
                     <img src="Assets/GameImages/LaForret.PNG">
                     <div class="layer">
                         <h3>La Forret</h3>
@@ -128,7 +126,7 @@
                         <a href="https://tplemur.github.io/La-Forret/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <div class="work hiddenGames">
                     <img src="Assets/GameImages/cursePokemon.png">
                     <div class="layer">
                         <h3>Curse That Pokemon!</h3>
@@ -136,15 +134,15 @@
                         <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-                <div class="work">
-                    <img src="Assets/logo.png">
+                <div class="work hiddenGames">
+                    <img src="Assets/logo.png   ">
                     <div class="layer">
                         <h3>Toybox</h3>
                         <p>A collection of fragmented unity explorations.</p>
-                        <a href="3"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <div class="work hiddenGames">
                     <img src="Assets/GameImages/QTE.gif">
                     <div class="layer">
                         <h3>Quick Time Escapade</h3>
@@ -152,7 +150,9 @@
                         <a href="https://tplemur.github.io/QuickTimeEscapade/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
+
             </div>
+            <i class="btn" id="moreBtn" onclick="showMore()">See More</i>
         </div>
     </div>
 
@@ -229,6 +229,7 @@
         //script for switching between tabs in the about me section
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
+        var hiddenGames = document.getElementsByClassName('hiddenGames')
         function opentab(tabname){
             for(tablink of tablinks){
                 tablink.classList.remove("active-link");
@@ -249,10 +250,13 @@
             sidemenu.style.right = "-200px"
         }
         var moreBlock = document.getElementById("more-work");
-        var moreBtn = document.getElementById("moreBtn")
+        var moreBtn = document.getElementById("moreBtn");
         function showMore(){
-            moreBlock.classList.remove("hidden");
-            moreBtn.classList.add("hidden");
+            //objects get removed from list, so loop until list is empty
+            while(0< hiddenGames.length){
+                hiddenGames[0].classList.remove('hiddenGames');
+            }
+            moreBtn.classList.add("hiddenGames");
         }
     </script>
   
