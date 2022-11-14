@@ -28,29 +28,37 @@
     <div id="about">
         <div class="container">
             <div class="tab-titles">
-                <p class="tab-links active-link" onclick="opentab('slide','slideimg')">FIRST Robotics</p>
-                <p class="tab-links" onclick="opentab('round','roundimg')">Table</p>
+                <p class="tab-links active-link" onclick="opentab('grt','grtimg')">FIRST Robotics</p>
+                <p class="tab-links" onclick="opentab('table','tableimg')">Table</p>
             </div>
             <div class="row">
                 <div class="about-col-1">
-                    <div class="tab-contents active-tab" id="slide">
+                    <div class="tab-contents active-tab" id="grt">
                         <ul>
-                            <li><span>Initial design</span><br></li>
+                            <li><span>Team</span><br>I was part of team 192 (Gunn Robotics Team aka GRT)</li>
+                            <li><span>Student Run</span><br>We pride ouselves on being a student run organization. All design and fabrication for the robot is done in house by students. While the team does have mentors they are there for liabilty and advice only.</li>
+                            <li><span>Awards</span><br>The team won the 2017 North Arizona Regional</li>
+                            <li><span>My Work</span><br>For the 2017 robot I primarily worked on two systems:</li>
+                            <li><span>The Climber</span><br>While many teams had the idea of a velcro covered roller, we had one innovation that made ours significantly more reliable. We tied a slip knot in the strap so that the spool had a few winds before the weight of the robot was on it. We also spread this knowledge to a number of other teams to improve their reliablity as well.</li>
+                            <li><span>The Gear Box</span><br>This is one of the most effective uses of a prototype I've ever been involved in. I created a modular prototype that allowed us to find the exact limits of the angle at which the box mechinism could rest.</li>
+                            <li><span>Rookie Training</span><br>Being a student run organization, knowledge needs to be passed down between students. We spend most of the non competition season training the next generation of teammates.</li>
                         </ul>
                     </div>
-                    <div class="tab-contents" id="round">
+                    <div class="tab-contents" id="table">
                         <ul>
+                            <li><span>Initial design</span><br></li>
+                            <li><span>Initial design</span><br></li>
                             <li><span>Initial design</span><br></li>
                         </ul>
                     </div>
                 </div>
                 <div class="about-col-2">
-                    <div class="tab-img active-img" id="slideimg">
+                    <div class="tab-img active-img" id="grtimg">
                         <img src="../Assets/engineer/frcClimb.jpg">
                         <img src="../Assets/engineer/frcGear.jpg">
                         <img src="../Assets/engineer/frcTrain.jpg">
                     </div>
-                    <div class="tab-img" id="roundimg">
+                    <div class="tab-img" id="tableimg">
                         <img src="../Assets/engineer/openTable.jpg">
                         <img src="../Assets/engineer/closedTable.jpg">
                     </div>
@@ -110,7 +118,7 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
             document.getElementById(imgname).classList.add("active-img");
-            if(tabname == 'round'){
+            if(tabname == 'table'){
                 document.getElementById("processShowHide").classList.add("shown");
             }
             else{
