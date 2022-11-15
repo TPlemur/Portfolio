@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="dvd.css">
     <script src="https://kit.fontawesome.com/bf513985fa.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -23,6 +23,58 @@
             </div>
         </div>
     </div>
+
+    <!-- --------About Me------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <ul>
+                        <li><span>An Education</span><br>Making this game taught me a lot about getting precicely timed events to work correctly.</li>
+                        <li><span>Tick Build</span><br>This build makes one fataly flawed assumption: The tick rate is constant. Unfortnaly even if the tick rate was constant, we would still lose synconization due to the bpm of the song not being devisible by the tick rate.</li>
+                        <li><span>Time build</span><br>While this version doesn't look any different, it keeps synconization much better, solely because it tracks unix time to place beats correctly instead of using ticks. Much of the core movement functionality of the game is still fully intact, other than the input for what the queues are, but I switched out the scoring system as well.</li>
+                    </ul>
+                </div>
+                <div class="about-col-2">
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Ticks')">Ticks</p>
+                        <p class="tab-links" onclick="opentab('Time')">Time</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Ticks">
+                            <iframe src="https://tplemur.github.io/DVD/" id="tickBuild"></iframe>
+                    </div>
+                    <div class="tab-contents" id="Time">
+                            <iframe src="https://tplemur.github.io/DVD-fixed/" id="timeBuild"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>        
+    //script for switching between tabs in the about me section
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        var tickBuild = document.getElementById('tickBuild');
+        var timeBuild = document.getElementById('timeBuild');
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcont of tabcontents){
+                tabcont.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+            if(tabname == "Ticks"){
+                timeBuild.src = timeBuild.src;
+            }
+            else{
+                tickBuild.src = tickBuild.src;
+            }
+
+        }</script>
 
 </body>
 </html>
