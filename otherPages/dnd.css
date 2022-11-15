@@ -69,14 +69,14 @@ nav ul li a:hover::after{
     flex-wrap: wrap;
 }
 .about-col-1{
-    flex-basis: 50%;   
+    flex-basis: 35%;   
 }
 .about-col-2 img{
     width: 100%;
     border-radius: 15px;
 }
 .about-col-2{
-    flex-basis: 45%;
+    flex-basis: 60%;
 }
 .tab-titles{
     display: flex;
@@ -103,23 +103,12 @@ nav ul li a:hover::after{
 .tab-links.active-link::after{
     width: 50px;
 }
-.tab-contents ul li{
-    list-style: none;
-    margin: 10px 0;
-}
-.tab-contents ul li span{
-    color: #508050;
-    font-size: 14px;
+.tab-contents ul iframe{
+    width: 100%;
 }
 .tab-contents{
     display: none;
 }
 .tab-contents.active-tab{
-    display: block;
-}
-.tab-img{
-    display: none;
-}
-.tab-img.active-img{
     display: block;
 }

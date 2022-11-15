@@ -24,5 +24,58 @@
         </div>
     </div>
 
+
+    <!-- --------About Me------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <h1 class="sub-title">Benefits</h1>
+                    <p>I know, I know, what good is playing that nerd game? First up being a DM is probably the best improv training a person can get. Additionaly creating homebrews is good practice for balancing new systems within a compex pre-existing game. (not that all these are balanced)</p>
+                </div>
+                <div class="about-col-2">
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('soulforged')">Soulforged Auto-Tinker</p>
+                        <p class="tab-links" onclick="opentab('warp')">Path of Warp</p>
+                        <p class="tab-links" onclick="opentab('witch')">Blood Witch</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="soulforged">
+                        <ul>
+                            <iframe width="560" height="500" src="../Assets/dnd/HomebreweryStuff.pdf"></iframe>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="warp">
+                        <ul>
+                            <iframe width="560" height="500" src="../Assets/dnd/Path of Warp.pdf"></iframe>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="witch">
+                        <ul>
+                            <iframe width="560" height="500" src="../Assets/dnd/Blood Witch.pdf"></iframe>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        //script for switching between tabs in the about me section
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        var hiddenGames = document.getElementsByClassName('hiddenGames')
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcont of tabcontents){
+                tabcont.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
 </body>
 </html>
