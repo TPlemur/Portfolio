@@ -73,7 +73,8 @@ nav ul li a:hover::after{
     flex-wrap: wrap;
 }
 .about-col-1{
-    flex-basis: 35%;   
+    flex-basis: 35%; 
+    min-width: 250px;  
 }
 .about-col-2{
     flex-basis: 60%;
