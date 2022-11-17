@@ -80,13 +80,14 @@ nav ul li a:hover::after{
     flex-basis: 60%;
     position: relative;
     padding-bottom: 60%;
+    height: fit-content;
 }
 .about-col-2 iframe{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 56%;
     border-radius: 15px;
 }
 .tab-contents ul li{
