@@ -14,7 +14,7 @@ html{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url("Assets/mainPage/logo.png"); /*TODO*/
+    background-image: url("Assets/mainPage/ThomasWide.png"); /*TODO*/
     background-size: cover;
     background-position: center;
 }
@@ -309,7 +309,7 @@ nav .fa-solid{
 
 @media only screen and (max-width:600px){
     #header{
-        background-image: url(Assets/logo.png);
+        background-image: url(Assets/mainPage/ThomasNarrow.png);
     }
     .header-text{
         margin-top: 100%;
