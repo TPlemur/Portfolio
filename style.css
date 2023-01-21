@@ -6,7 +6,7 @@
 }
 body{
     background: #000000;
-    color: #fff;
+    color: #e2e2e2;
 }
 html{
     scroll-behavior:smooth;
@@ -36,7 +36,7 @@ nav ul li{
     margin: 10px 20px;
 }
 nav ul li a{
-    color: #fff;
+    color: #e2e2e2;
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -88,7 +88,7 @@ nav ul li a:hover::after{
 .sub-title{
     font-size: 60px;
     font-weight: 600;
-    color: #fff;
+    color: #e2e2e2;
 }
 .tab-titles{
     display: flex;
@@ -159,7 +159,7 @@ nav ul li a:hover::after{
 }
 .other-list div a{
     text-decoration: none;
-    color: #fff;
+    color: #e2e2e2;
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
@@ -220,7 +220,7 @@ nav ul li a:hover::after{
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
-    background: #fff;
+    background: #e2e2e2;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -240,7 +240,7 @@ nav ul li a:hover::after{
     padding: 14px;
     border-radius: 6px;
     text-decoration: none;
-    color: #fff;
+    color: #e2e2e2;
     transition: background 0.5s;
 }
 .btn:hover{
@@ -291,7 +291,7 @@ form input, form textarea{
     background: #262626;
     padding: 15px;
     margin: 15px 0;
-    color: #fff;
+    color: #e2e2e2;
     font-size: 18px;
     border-radius: 6px;
 }

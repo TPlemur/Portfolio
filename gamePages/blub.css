@@ -6,7 +6,7 @@
 }
 body{
     background: #000000;
-    color: #fff;
+    color: #e2e2e2;
 }
 html{
     scroll-behavior: smooth;
@@ -36,7 +36,7 @@ nav ul li{
     margin: 10px 20px;
 }
 nav ul li a{
-    color: #fff;
+    color: #e2e2e2;
     text-decoration: none;
     font-size: 18px;
     position: relative;
