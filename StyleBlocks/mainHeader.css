@@ -1,0 +1,123 @@
+/*-- CSS that sets up the doc & the header for main pages --*/
+/*----------Page Setup--------*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #111111;
+    color: #e2e2e2;
+}
+html{
+    scroll-behavior:smooth;
+}
+.container{
+    padding: 10px 10px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/*----------Primary title Block--------*/
+.titleBlock{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000000;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 75px;
+    height: 75px;
+}
+  
+.logo h1 {
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+nav{
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #e2e2e2;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #084008;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 1%;
+    margin-left: 30px;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 20px;
+}
+
+/*----------CSS for small screens--------*/
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width:600px){
+    .header-text h1{
+        font-size: 20px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #084008;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+}

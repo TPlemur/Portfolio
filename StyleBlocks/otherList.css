@@ -1,0 +1,39 @@
+/*----------Other--------*/
+#other{
+    padding: 30px 0;
+}
+.other-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.other-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.other-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.other-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.other-list div a{
+    text-decoration: none;
+    color: #e2e2e2;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.other-list div:hover{
+    background: #084008;
+    transform: translateY(-10px);
+
+}

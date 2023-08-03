@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../StyleBlocks/mainHeader.css">
+    <link rel="stylesheet" href="../StyleBlocks/twoCol.css">
+    <link rel="stylesheet" href="../StyleBlocks/socialIcon.css">
+    <!-- page specific adjustment-->
+    <style>
+        .tab-img{
+            display: block;
+            width: 50%;
+        }
+    </style>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../Assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../Assets/favicon/site.webmanifest">
+
+    <script src="https://kit.fontawesome.com/bf513985fa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- --------Header-------- -->
+    <div id="header">
+        <div class = titleBlock>
+            <div class="logo">
+                <img src="../Assets/mainPage/PonderousLogo.png">
+                <h1>Thomas Price</h1>
+            </div>
+            <nav>    
+                <ul id="sidemenu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../headerPages/aboutMe.html">About Me</a></li>
+                    <li><a href="../headerPages/projects.html">All Projects</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars"onclick="openmenu()"></i>
+            </nav>
+        </div>
+        <div class="header-text">
+            <h1>A series of one button games, made with crisp-game-lib. </h1>
+        </div>
+    </div>
+
+    <!-- --------QTE-------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <div class="tab-contents" id="slide">
+                        <ul>
+                            <li><span>Q.T.E.</span><br>My first attempt at a one button game, and an exploration of the storytelling potential of a single interaction. I was hoping the continuous time pressure of the game would increase the tension of the game, but the concept didn't work out in this case. I also mostly ignored the intended scope of the game engine, and created a game that probably should have been made in twine instead.</li>
+                            <div class="social-icons">
+                                <a href="../gamePages/qte.html">Play! <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-col-2">
+                    <div class="tab-img" id="slideimg">
+                        <img src="../Assets/GameImages/QTE.gif">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------ORBIT-------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-2">
+                    <div class="tab-img" id="slideimg">
+                        <img src="../Assets/GameImages/orbit.gif">
+                    </div>
+                </div>
+                <div class="about-col-1">
+                    <div class="tab-contents" id="slide">
+                        <ul>
+                            <li><span>Orbit</span><br>A loosly physics based game about collecting space junk. I made this game as an exploration of the engine, because QTE ignored most of the features of the engine. The game also helped satisfy an itch from my previous project Quasar Escape - I got to make a more physics accurate orbit simulaiton. The game is fairly difficult due to the unintuitive nature of orbital mechanics, and I think would be siginificanlty improved by the addition of an orbit predicting line.</li>
+                            <div class="social-icons">
+                                <a href="../gamePages/orbit.html">Play! <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- --------BLUB-------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <div class="tab-contents" id="slide">
+                        <ul>
+                            <li><span>Blub</span><br>My third game, made with a partner. The core mechanic of the game is a relitivly unoriginal, but I think our speed and spawning paramaters are well tuned. I made the shark sprites and the background bubbles, and by the time I got back from class the game was mostly done. </li>
+                            <div class="social-icons">
+                                <a href="../gamePages/blub.html">Play! <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-col-2">
+                    <div class="tab-img" id="slideimg">
+                        <img src="../Assets/GameImages/blub.gif">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------DVD-------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-2">
+                    <div class="tab-img" id="slideimg">
+                        <img src="../Assets/GameImages/DVD.gif">
+                    </div>
+                </div>
+                <div class="about-col-1">
+                    <div class="tab-contents" id="slide">
+                        <ul>
+                            <li><span>DVD</span><br>A lesson in how not to make a rhythem game, by a group of about four of us. We started out with lots of confidence and no research, and created a game that refused to sync with the music, and had rediculously generous scoring. In this first iteration of the game I was responible for the making the logo bounce correctly. After the project I went back and fixed our fundimental broken assumtion: ticks are spaced correctly right? Both versions of the game can be played through the link below.</li>
+                            <div class="social-icons">
+                                <a href="../gamePages/dvd.html">Play! <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

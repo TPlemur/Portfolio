@@ -5,7 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="ferrous.css">
+    <link rel="stylesheet" href="../StyleBlocks/imgHeader.css">
+    <link rel="stylesheet" href="../StyleBlocks/twoCol.css">
+    <link rel="stylesheet" href="../StyleBlocks/socialIcon.css">
+    <link rel="stylesheet" href="../StyleBlocks/tabsForTwoCol.css">
+    
+    <style>
+        #header{
+            background-image: url("../Assets/GameImages/FerrusHawk.gif");/*TODO*/
+        }
+        .tab-contents{
+        display: none;
+        }
+        .tab-contents.active-tab{
+            display: block;
+        }
+        .tab-img{
+            display: none;
+            width: 100%;
+        }
+        .tab-img.active-img{
+            display: block;
+        }
+        .hidden{
+            display: none;
+        }
+        .about-col-2 iframe{
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            border-radius: 15px;
+        }
+        .social-icons a{
+            font-size: 30px;
+        }
+    </style>
+
     <link rel="apple-touch-icon" sizes="180x180" href="../Assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../Assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../Assets/favicon/favicon-16x16.png">
@@ -21,6 +58,7 @@
                 <img src="../Assets/mainPage/PonderousLogo.png" class="logo">
                 <ul id="sidemenu">
                     <li><a href="../index.html">Home</a></li>
+                    <li><a onClick="history.back()">Back</a></li>
                 </ul>
             </nav>
             <div class="header-text">
@@ -70,7 +108,7 @@
                     <!-- I don't know why this doesn't scale properly when inside the tab-img, so here it is instead-->
                     <iframe src="https://tplemur.github.io/Jam3-PrototypeRythem/" class="hidden" id="rProto"></iframe>
                     <div class="tab-img active-img" id="finalimg">                   
-                        <img src="../Assets/mainPage/logo.png"></img>
+                        <img src="../Assets/GameImages/FerrusHawk.gif"></img>
                     </div>
                     <div class="tab-img" id="miroimg">                   
                         <img src="../Assets//GameImages/ferrous/FerrousMiroOne.PNG"></img>

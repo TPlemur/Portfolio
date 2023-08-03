@@ -5,7 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="Elemental.css">    
+    <link rel="stylesheet" href="../StyleBlocks/imgHeader.css">
+    <link rel="stylesheet" href="../StyleBlocks/twoCol.css">
+
+    <!-- Add header img and other css adjustments-->
+    <style>
+        #header{
+            background-image: url("../Assets/elementalpics/Prototypes.jpg");
+        }
+        .social-icons a{
+            font-size: 30px;
+        }
+        .header-text h1{
+            color: #084008;
+        }
+
+    </style>
+
     <link rel="apple-touch-icon" sizes="180x180" href="../Assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../Assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../Assets/favicon/favicon-16x16.png">
@@ -21,6 +37,7 @@
                 <img src="../Assets/mainPage/PonderousLogo.png" class="logo">
                 <ul id="sidemenu">
                     <li><a href="../index.html">Home</a></li>
+                    <li><a onClick="history.back()">Back</a></li>
                 </ul>
             </nav>
             <div class="header-text">
@@ -46,9 +63,9 @@
                     <div class="tab-img" id="slideimg">
                         <img src="../Assets/elementalpics/finalCards.jpg">
                     </div>
+                    <a href="https://www.makeplayingcards.com/sell/marketplace/elemental-card-game.html" class="btn">Store Link</a> <!--TODO LINK STORE-->
                 </div>
             </div>
-            <a href="https://www.makeplayingcards.com/sell/marketplace/elemental-card-game.html" class="btn">Store Link</a> <!--TODO LINK STORE-->
         </div>
     </div>
 </body>

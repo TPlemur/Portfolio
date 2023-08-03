@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="../StyleBlocks/mainHeader.css">
+    <link rel="stylesheet" href="../StyleBlocks/about.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../Assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../Assets/favicon/site.webmanifest">
+
+    <script src="https://kit.fontawesome.com/bf513985fa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- --------Header-------- -->
+    <div id="header">
+        <div class = titleBlock>
+            <div class="logo">
+                <img src="../Assets/mainPage/PonderousLogo.png">
+                <h1>Thomas Price</h1>
+            </div>
+            <nav>    
+                <ul id="sidemenu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../headerPages/aboutMe.html">About Me</a></li>
+                    <li><a href="../headerPages/projects.html">All Projects</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars"onclick="openmenu()"></i>
+            </nav>
+        </div>
+        <div class="header-text">
+            <h1>My skill and such.</h1>
+        </div>
+    </div>
+
+    <!-- --------About Me------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="../Assets/mainPage/logo.png"> <!--TODO-->
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I love making games, and have been doing it as a hobby long before I realized it was a viable career.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Rapid Prototyping</span><br>Using tools like Twine or crisp-game-lib to test ideas</li>
+                            <li><span>Web Dev</span><br>Using HTML,CSS, and Javascript</li>
+                            <li><span>Game dev</span><br>Unity and web based development</li>
+                            <li><span>3D modeling</span><br>Autodesk and Blender</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2014-present</span><br>Voulenteer work, mostly through boy scouts.</li>
+                            <li><span>2017-2021</span><br>Zuchero Lab</li>
+                            <li><span>2022-2022</span><br>Reader/Tutor at UCSC</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2023</span><br>BS in Comp-Sci: Game Design from UCSC</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- -----scripts for switching about me tabs and managing the sidebar and showing more games----- -->
+    <script>
+        //script for switching between tabs in the about me section
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        var hiddenGames = document.getElementsByClassName('hiddenGames')
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcont of tabcontents){
+                tabcont.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        //functions for opening and closing the sidebar in small screen mode
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0"
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px"
+        }
+        var moreBlock = document.getElementById("more-work");
+        var moreBtn = document.getElementById("moreBtn");
+        function showMore(){
+            //objects get removed from list, so loop until list is empty
+            while(0< hiddenGames.length){
+                hiddenGames[0].classList.remove('hiddenGames');
+            }
+            moreBtn.classList.add("hiddenGames");
+        }
+    </script>
+
+</body>
+</html>

@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="../StyleBlocks/mainHeader.css">
+    <link rel="stylesheet" href="../StyleBlocks/gamesList.css">
+    <link rel="stylesheet" href="../StyleBlocks/ContactInfo.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="Assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="Assets/favicon/favicon-32x32.png">
@@ -17,71 +20,31 @@
 <body>
     <!-- --------Header-------- -->
     <div id="header">
-        <div class="container">
-            <nav>
-                <img src="Assets/mainPage/PonderousLogo.png" class="logo">
+        <div class = titleBlock>
+            <div class="logo">
+                <img src="../Assets/mainPage/PonderousLogo.png">
+                <h1>Thomas Price</h1>
+            </div>
+            <nav>    
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#games">Games</a></li>
-                    <li><a href="#other">Other</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="../headerPages/aboutMe.html">About Me</a></li>
+                    <li><a href="../headerPages/projects.html">All Projects</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
                     <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
                 <i class="fa-solid fa-bars"onclick="openmenu()"></i>
             </nav>
-            <div class="header-text">
-                <p>Game Designer</p>
-                <h1>Hi, I'm <span>Thomas</span>, a relentless tinkerer</h1>
-
-            </div>
         </div>
-    </div>
-
-    <!-- --------About Me------- -->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="Assets/mainPage/logo.png"> <!--TODO-->
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>I love making games, and have been doing it as a hobby long before I realized it was a viable career.</p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('Education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="Skills">
-                        <ul>
-                            <li><span>Rapid Prototyping</span><br>Using tools like Twine or crisp-game-lib to test ideas</li>
-                            <li><span>Web Dev</span><br>Using HTML,CSS, and Javascript</li>
-                            <li><span>Game dev</span><br>Unity and web based development</li>
-                            <li><span>3D modeling</span><br>Autodesk and Blender</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="Experience">
-                        <ul>
-                            <li><span>2014-present</span><br>Voulenteer work, mostly through boy scouts.</li>
-                            <li><span>2017-2021</span><br>Zuchero Lab</li>
-                            <li><span>2022-2022</span><br>Reader/Tutor at UCSC</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="Education">
-                        <ul>
-                            <li><span>2023</span><br>BS in Comp-Sci: Game Design from UCSC</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="header-text">
+            <h1>I'm a game designer specializing in code implementation, rapid prototyping and shaders.</h1>
         </div>
     </div>
 
     <!-- -------Games------- -->
     <div id="games">
         <div class="container">
-            <h1 class="sub-title">Digital Games</h1>
+            <h1 class="sub-title">Projects</h1>
             <div class="work-list">
                 <div class="work">
                     <img src="Assets/GameImages/QuasarEscape.gif">
@@ -92,127 +55,22 @@
                     </div>
                 </div>
                 <div class="work">
-                    <img src="Assets/GameImages/axisLost.gif">
+                    <img src="../Assets/GameImages//VinesImg/VinesHighlits.gif">
                     <div class="layer">
-                        <h3>Axis Lost</h3>
-                        <p>Explore a spacship. A perfectly ordinary spaceship.</p>
-                        <a href="gamePages/axisLost.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <h3>Vines</h3>
+                        <p>Document The Splitjaw</p>
+                        <a href="../gamePages/vines.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="Assets/GameImages/DVD.gif">
+                    <img src="Assets/GameImages/CardImgs/Elemental16_9.gif">
                     <div class="layer">
-                        <h3>DVD</h3>
-                        <p>How not to make a rythem game.</p>
-                        <a href="gamePages/dvd.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <h3>Elemental</h3>
+                        <p>Balance the elements in your favor.</p>
+                        <a href="otherPages/Elemental.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-                <!-- ------Hidden until button pressed------ -->
-                <div class="work hiddenGames">
-                    <img src="Assets/GameImages/orbit.gif">
-                    <div class="layer">
-                        <h3>Orbit</h3>
-                        <p>wheee... SPACE!</p>
-                        <a href="gamePages/orbit.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work hiddenGames">
-                    <img src="Assets/GameImages/blub.gif">
-                    <div class="layer">
-                        <h3>Blub</h3>
-                        <p>swim through an ocean of sharks collecting gold.</p>
-                        <a href="gamePages/blub.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work hiddenGames">
-                    <img src="Assets/GameImages/LaForret.PNG">
-                    <div class="layer">
-                        <h3>La Forret</h3>
-                        <p>You're in a cabin, then the lights go out.</p>
-                        <a href="gamePages/laForret.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work hiddenGames">
-                    <img src="Assets/GameImages/cursePokemon.png">
-                    <div class="layer">
-                        <h3>Curse That Pokemon!</h3>
-                        <p>Use your art skills, and the power of AI to make pokemon fan art.</p>
-                        <a href="gamePages/curseMon.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work hiddenGames">
-                    <img src="Assets/GameImages/toyboxCompined.gif">
-                    <div class="layer">
-                        <h3>Toybox</h3>
-                        <p>A collection of fragmented unity explorations.</p>
-                        <a href="gamePages/toyBox.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work hiddenGames">
-                    <img src="Assets/GameImages/grimwood.gif">
-                    <div class="layer">
-                        <h3>Grimwood Path</h3>
-                        <p>A walk in the woods is interupted by a monster.</p>
-                        <a href="gamePages/grimwood.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work hiddenGames">
-                    <img src="Assets/GameImages/QTE.gif">
-                    <div class="layer">
-                        <h3>Quick Time Escapade</h3>
-                        <p>A lesson in using the wrong tool for the job.</p>
-                        <a href="gamePages/qte.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work hiddenGames">
-                    <img src="Assets/mainPage/logo.png">
-                    <div class="layer">
-                        <h3>Ferrous Hawk</h3>
-                        <p>Fight the Ferrous Hawk</p>
-                        <a href="gamePages/ferrous.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-
-            </div>
-            <i class="btn" id="moreBtn" onclick="showMore()">See More</i>
-        </div>
-    </div>
-
-    <!-- ------other------ -->
-    <div id="other">
-        <div class="container">
-            <h1 class="sub-title">Other Projects</h1>
-            <div class="other-list">
-                <div>
-                    <i class="fa-solid fa-heart"></i>
-                    <h2>Elemental</h2>
-                    <p>Balance the elements! Collect points for yourself while ensuring others are left with nothing in this trick taking card game inspired by hearts.</p>
-                    <a href="otherPages/Elemental.html">Learn more</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-chess-board"></i>
-                    <h2>Portal 3: The Board Game</h2>
-                    <p>This game is unavilible due to licencing concerns</p>
-                    <a href="otherPages/portalThree.html">Learn more</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-puzzle-piece"></i>
-                    <h2>Puzzles</h2>
-                    <p>A collection of wooden puzzle boxes</p>
-                    <a href="otherPages/puzzles.html">Learn more</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-dice-d20"></i>
-                    <h2>Dungeons & Dragons</h2>
-                    <p>Homebrew, improv, entertainment</p>
-                    <a href="otherPages/dnd.html">Learn more</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-robot"></i>
-                    <h2>Robotics and Engineering</h2>
-                    <p>build all the things</p>
-                    <a href="otherPages/robots.html">Learn more</a>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -225,7 +83,7 @@
                     <h1 class="sub-title">Contact Me</h1>
                     <p><i class="fa-solid fa-paper-plane"></i> TPlemur@gmail.com</p>
                     <p><i class="fa-regular fa-message"></i> (650)382-9430</p>
-                    <p><i class="fa-brands fa-discord"></i> TPlemur#2529</p>
+                    <p><i class="fa-brands fa-discord"></i> tplemur</p>
                     <div class="social-icons">
                         <a href="https://www.linkedin.com/in/thomas-price-5a0957145/"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://tplemur.itch.io"><i class="fa-brands fa-itch-io"></i></a>
